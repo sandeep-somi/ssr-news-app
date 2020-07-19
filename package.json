@@ -4,6 +4,9 @@
   "private": true,
   "dependencies": {
     "@babel/core": "7.9.0",
+    "@babel/preset-env": "^7.10.4",
+    "@babel/preset-react": "^7.10.4",
+    "@babel/register": "^7.10.5",
     "@reduxjs/toolkit": "^1.4.0",
     "@svgr/webpack": "4.3.3",
     "@testing-library/jest-dom": "^4.2.4",
@@ -34,10 +37,12 @@
     "eslint-plugin-jsx-a11y": "6.2.3",
     "eslint-plugin-react": "7.19.0",
     "eslint-plugin-react-hooks": "^1.6.1",
+    "express": "^4.17.1",
     "file-loader": "4.3.0",
     "fs-extra": "^8.1.0",
     "html-webpack-plugin": "4.0.0-beta.11",
     "identity-obj-proxy": "3.0.0",
+    "ignore-styles": "^5.0.1",
     "jest": "24.9.0",
     "jest-environment-jsdom-fourteen": "1.0.1",
     "jest-resolve": "24.9.0",
@@ -79,7 +84,8 @@
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
-    "test": "node scripts/test.js"
+    "test": "node scripts/test.js",
+    "ssr": "NODE_ENV=development node server/index.js"
   },
   "eslintConfig": {
     "extends": "react-app"

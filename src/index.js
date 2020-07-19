@@ -7,13 +7,16 @@ import Routes from './routes';
 import './assets/styles/index.scss';
 import './mydb';
 
-const store = configureStore();
+const preloadedState = window.__PRELOADED_STATE__;
+delete window.__PRELOADED_STATE__;
+
+const store = configureStore(preloadedState);
 
 if(module.hot) {
   module.hot.accept();
 }
 
-ReactDOM.render(
+ReactDOM.hydrate(
   <Provider store={store}>
     <React.StrictMode>
       <Routes />

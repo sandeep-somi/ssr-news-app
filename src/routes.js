@@ -1,7 +1,7 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import { StaticRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import Main from './containers/Main/index';
-import AppContainer from '@containers/AppContainer';
+import AppContainer from './containers/AppContainer';
 
 export default function () {
 
