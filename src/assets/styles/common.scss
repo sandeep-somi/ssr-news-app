@@ -1,0 +1,92 @@
+html, body {
+  font-family: 'ubuntu';
+  font-size: 14px;
+}
+
+.news-table-wrapper {
+  overflow-x: auto;
+  table {
+    width: 100%;
+    font-size: 14px;
+    thead {
+      background-color: #FD6900;
+      color: #fff;
+      font-size: 12px;
+    }
+    tr th, tr td {
+      padding: 4px 8px;
+    }
+    tbody {
+      tr:nth-child(odd) {
+        background-color: #F3F7EF;
+      }
+      tr:nth-child(even) {
+        background-color: #E5E6DE;
+      }
+    }
+    tbody tr td {
+      &:first-child {
+        text-align: center;
+        width: 60px;
+      }
+      &:nth-child(2) {
+        text-align: center;
+        width: 85px;
+      }
+      &:nth-child(3) {
+        text-align: center;
+        width: 50px;
+        color: #999;
+        i {
+          cursor: pointer;
+          &:hover {
+            color: #FD6900;
+          }
+        }
+      }
+      span {
+        margin-left: 4px;
+        font-size: 11px;
+        a {
+          color: #888;
+        }
+      }
+      .news-by {
+        color: #bbb;
+      }
+      .posted {
+        color: #888;
+      }
+      .hide-action {
+        cursor: pointer;
+        &:hover {
+          color: #FD6900;
+        }
+      }
+    }
+    tfoot tr td {
+      text-align: right;
+      color: #FD6900;
+      span {
+        cursor: pointer;
+        color: #FD6900;
+        &.disabled {
+          color: #aaa;
+          cursor: not-allowed;
+        }
+      }
+    }
+  }
+}
+
+.chart-container {
+  padding-top: 16px;
+  border-top: 2px solid #FD6900;
+  border-bottom: 2px solid #FD6900;
+  margin-bottom: 16px;
+}
+
+// less than 50 #000
+// less than 80 #552300
+// less than 100 #AD4404
+// less than 200 #FF6705
