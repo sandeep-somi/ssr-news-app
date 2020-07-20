@@ -2,6 +2,9 @@
   "name": "news-app-ssr",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "12.10.2"
+  },
   "dependencies": {
     "@babel/core": "7.9.0",
     "@babel/preset-env": "^7.10.4",
