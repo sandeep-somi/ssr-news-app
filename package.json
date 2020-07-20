@@ -86,7 +86,7 @@
     "build": "node scripts/build.js",
     "test": "node scripts/test.js",
     "ssr": "NODE_ENV=development PORT=3001 node server/index.js",
-    "deploy": "yarn build && yarn ssr",
+    "deploy": "npm run build && npm run ssr",
     "heroku-postbuild": "npm run build"
   },
   "eslintConfig": {
