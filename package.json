@@ -89,7 +89,7 @@
     "build": "node scripts/build.js",
     "test": "node scripts/test.js",
     "ssr": "NODE_ENV=development node server/index.js",
-    "deploy": "npm run build && npm run ssr"
+    "deploy": "npm run ssr"
   },
   "eslintConfig": {
     "extends": "react-app"
