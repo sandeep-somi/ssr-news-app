@@ -1,1 +1,1 @@
-export const API_URL = process.env.REACT_APP_API_BASE_URL || 'http://hn.algolia.com/api/v1';
+export const API_URL = process.env.REACT_APP_API_BASE_URL || 'https://hn.algolia.com/api/v1';
