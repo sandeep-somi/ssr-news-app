@@ -57,7 +57,7 @@ const store = mockStore({
     }
 })
 
-describe('renders learn react link', () => {
+describe('Renders Newstable Component', () => {
   const wrapper = mount(<Provider store={store}><NewsTable /></Provider>);
 
   it('should render correctly', () => {
@@ -69,7 +69,8 @@ describe('renders learn react link', () => {
   });
 
   it('should render row', () => {
-    expect(wrapper.find("tr").hostNodes().length).toBe(1);
+      console.log(wrapper.debug());
+    expect(wrapper.find(".news-row").hostNodes().length).toBe(1);
   })
 
 });
