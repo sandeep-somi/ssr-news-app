@@ -32,7 +32,7 @@ export default function () {
     const origin = url && url.split('/')[2] || '';
 
     return (
-      <tr key={objectID || index}>
+      <tr className="news-row" key={objectID || index}>
         <td>{num_comments}</td>
         <td>{votes}</td>
         <td>
