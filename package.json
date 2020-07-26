@@ -88,7 +88,7 @@
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js",
-    "ssr": "NODE_ENV=development PORT=3001 node server/index.js",
+    "ssr": "node server/index.js",
     "deploy": "npm run build && npm run ssr",
     "heroku-postbuild": "npm run build"
   },
@@ -163,6 +163,9 @@
     ]
   },
   "devDependencies": {
-    "redux-devtools-extension": "^2.13.8"
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.2",
+    "redux-devtools-extension": "^2.13.8",
+    "redux-mock-store": "^1.5.4"
   }
 }

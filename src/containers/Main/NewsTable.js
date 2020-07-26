@@ -66,7 +66,7 @@ export default function () {
 
   return (
     <div className="news-table-wrapper">
-      <table id="news-table">
+      <table id="news-table" data-testid="news-table">
         <thead>
           <tr>
             <th>Comments</th>
