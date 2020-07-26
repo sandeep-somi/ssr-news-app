@@ -12,7 +12,43 @@ const mockStore = configureMockStore(middlewares)
 const store = mockStore({
     main: {
         isLoading: false,
-        hits: [],
+        hits: [
+            {
+                "created_at": "2018-03-14T03:50:30.000Z",
+                "title": "Stephen Hawking has died",
+                "url": "http://www.bbc.com/news/uk-43396008",
+                "author": "Cogito",
+                "points": 6015,
+                "story_text": null,
+                "comment_text": null,
+                "num_comments": 436,
+                "story_id": null,
+                "story_title": null,
+                "story_url": null,
+                "parent_id": null,
+                "created_at_i": 1520999430,
+                "relevancy_score": 8012,
+                "_tags": ["story", "author_Cogito", "story_16582136"],
+                "objectID": "16582136",
+                "_highlightResult": {
+                    "title": {
+                        "value": "Stephen Hawking has died",
+                        "matchLevel": "none",
+                        "matchedWords": []
+                    },
+                    "url": {
+                        "value": "http://www.bbc.com/news/uk-43396008",
+                        "matchLevel": "none",
+                        "matchedWords": []
+                    },
+                    "author": {
+                        "value": "Cogito",
+                        "matchLevel": "none",
+                        "matchedWords": []
+                    }
+                }
+            }
+        ],
         hitsPerPage: 30,
         page: 0,
         nbPages: null,
@@ -23,8 +59,17 @@ const store = mockStore({
 
 describe('renders learn react link', () => {
   const wrapper = mount(<Provider store={store}><NewsTable /></Provider>);
+
+  it('should render correctly', () => {
+    expect(wrapper).toMatchSnapshot();
+  })
+
   it('should render table', () => {
-    console.log(wrapper.debug());
     expect(wrapper.find("#news-table").hostNodes().length).toBe(1);
   });
+
+  it('should render row', () => {
+    expect(wrapper.find("tr").hostNodes().length).toBe(1);
+  })
+
 });
